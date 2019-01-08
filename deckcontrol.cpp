@@ -262,7 +262,7 @@ int main(int argc, char *argv[])
           break;
         }
 
-        sleep(0.04);
+        sleep(0.01);
       }
 
       break;
