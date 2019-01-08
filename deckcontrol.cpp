@@ -259,9 +259,11 @@ int main(int argc, char *argv[])
         if( abs(hours-tc[0])+(minutes-tc[1])+abs(seconds-tc[2])+abs(frames-tc[3])==0 ){
           printf("TC %02"PRIu8":%02"PRIu8":%02"PRIu8":%02"PRIu8" reached\n",
               hours, minutes, seconds, frames);
+          SAFE_RELEASE(currentTimecode);
           break;
         }
-
+        
+        SAFE_RELEASE(currentTimecode);
         sleep(0.01);
       }
 
